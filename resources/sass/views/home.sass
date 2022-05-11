@@ -1,0 +1,221 @@
+// =========== home-hero ========
+
+.home-search
+  .search-input
+    .autocomplete__inputs
+      border: none
+      height: 79px
+      @include mq('w_1367')
+        height: 60px
+      @include mq('w_575')
+        height: 50px
+
+    .autocomplete__box
+      @include mq('w_575')
+        margin-bottom: 5px
+
+      input
+        @include font-size(18px)
+        padding-left: 30px
+
+        @include mq('w_991')
+          font-size: 1.1rem
+          padding-left: 15px
+
+  .v-select__search
+    &.v-select
+      width: 150px
+      height: 79px
+      @include mq('w_1367')
+        height: 60px
+      @include mq('w_991')
+        width: 120px
+      @include mq('w_575')
+        height: 50px
+
+  .btn-search
+    width: 82px
+    height: 79px
+    background-color: #069b3e
+    margin-left: 0
+    @include mq('w_1367')
+      height: 60px
+      width: 60px
+    @include mq('w_575')
+      height: 50px
+      width: 50px
+      margin-left: 5px
+    svg
+      @include mq('w_991')
+        width: 24px
+        height: 24px
+      @include mq('w_575')
+        width: 18px
+        height: 18px
+    span
+      display: none
+
+
+
+.home-hero
+  padding-bottom: 110px
+  @include mq('w_991')
+    padding-bottom: 70px
+    height: 440px
+  @include mq('w_575')
+    padding-bottom: 35px
+
+  h1
+    @include font-size(55px)
+    @include line-height(57px)
+    color: #fff
+    font-weight: 300
+    margin-bottom: 35px
+    @include mq('w_767')
+      font-size: 3rem
+    @include mq('w_575')
+      font-size: 2.2rem
+      line-height: 2.6rem
+      margin-bottom: 20px
+    span
+      font-weight: 600
+      display: block
+
+// ============ .institutions ============
+
+.institutions
+  padding: 40px 0 28px
+  @include mq('w_767')
+    padding: 20px 0
+
+  &__item
+    background-color: #fff
+    height: 125px
+    padding: 20px 35px 20px 24px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    box-shadow: 0 2px 1px 0 rgba(145, 145, 145, 0.11)
+    border-radius: 3px
+    @extend .tdn
+    margin-bottom: 30px
+    transition: box-shadow .5s ease
+    @include mq('w_767')
+      padding: 18px
+    @include mq('w_575')
+      height: auto
+      margin-bottom: 15px
+
+    &:hover
+      box-shadow: 0 3px 3px 0 rgba(145, 145, 145, 0.5)
+    &-last
+      background-color: transparent
+      border: 2px solid #fff
+      justify-content: center
+      @include font-size(14px)
+      color: #434343
+      transition: box-shadow .5s ease, background-color .5s ease
+      &:hover
+        background-color: #fff
+      svg
+        margin-left: 13px
+
+  &__image
+    flex-shrink: 0
+    @include mq('w_767')
+      max-width: 55px
+
+  &__text
+    @include font-size(14px)
+    @include line-height(19px)
+    color: #000000
+    margin-left: 30px
+    @include mq('w_767')
+      margin-left: 15px
+
+// ========== home-city ==========
+
+.home-city
+  padding: 50px 0
+  @include mq('w_1199')
+    padding: 30px 0
+  @include mq('w_991')
+    padding: 30px 0 0
+
+  .title-btn
+    margin-bottom: 70px
+    @include mq('w_991')
+      margin-bottom: 40px
+
+  &__content
+    display: flex
+    justify-content: space-between
+    @include mq('w_1199')
+      flex-wrap: wrap
+      justify-content: center
+    @include mq('w_991')
+      justify-content: space-between
+
+  &__item
+    min-width: 106px
+    max-width: 130px
+    margin-right: 42px
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    margin-bottom: 15px
+    @include mq('w_1199')
+      margin-right: 25px
+      margin-left: 25px
+    @include mq('w_991')
+      margin-bottom: 30px
+    @include mq('w_767')
+      margin: 0 0 20px 0
+    @include mq('w_575')
+      width: 50%
+    &:last-child
+      margin-right: 0
+      @include mq('w_1199')
+        margin-right: 25px
+      @include mq('w_767')
+        margin-right: 0
+
+  .overlay
+    width: 106px
+    height: 106px
+    overflow: hidden
+    border-radius: 100%
+    margin: 0 auto 13px
+
+  &__text
+    font-weight: 500
+    @include font-size(14px)
+    color: #434343
+
+
+.home-blog
+  padding: 30px 0
+  @include mq('w_767')
+    padding: 20px 0 0
+
+  .blog__item
+    margin-bottom: 30px
+    display: flex
+    flex-direction: column
+
+  .blog__preview
+    margin-bottom: 28px
+    @include mq('w_991')
+      margin-bottom: 20px
+
+  .blog__text
+    font-weight: 500
+    @include font-size(20px)
+    @include line-height(27px)
+    @include mq('w_991')
+      font-size: 1.1rem
+      line-height: 1.3rem
+
+
+

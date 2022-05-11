@@ -1,0 +1,226 @@
+
+//========  v-select style  ==========
+
+.v-select__default
+  &-white
+    background-color: #fff
+  &.is-invalid
+    .dropdown-toggle
+      border: 1px solid $color-red !important
+
+
+  &.v-select
+    &.open
+      .open-indicator:before
+        margin-top: 3px
+    li
+      height: 36px
+      margin-bottom: 0
+
+    a
+      color: #000
+      display: flex
+      align-items: center
+      height: 100%
+      @include font-size(15px)
+
+    .dropdown-toggle
+      height: 52px
+      border: 1px solid #acc4de
+      border-radius: 3px
+      padding: 0 0 0 15px
+      cursor: pointer
+      @include mq('w_575')
+        height: 48px
+        padding-left: 10px
+      .clear
+        display: none
+      &::after
+        display: none
+
+    .dropdown-menu > .highlight > a
+      background: #f7f7f7
+      color: #000
+
+    .form-control
+      height: 100%
+      margin: 0 !important
+      padding: 0 !important
+      font-size: 0.9375rem
+
+    .vs__actions
+      padding: 0 15px 0 0
+
+    .open-indicator
+      &:before
+        height: 7px
+        width: 7px
+        margin-top: -2px
+        border-width: 2px 2px 0 0
+
+    .vs__selected-options
+      overflow: hidden
+      white-space: nowrap
+
+    .selected-tag
+      height: 100% !important
+      padding: 0 !important
+      margin: 0 !important
+      color: #000
+      font-size: 0.9375rem
+      font-weight: 400
+
+
+  &.filter-select
+    .dropdown-toggle
+      .clear
+        display: block
+
+  *::-webkit-input-placeholder
+    color: #969696
+    opacity: 1
+
+  *:-moz-placeholder
+    color: #969696
+    opacity: 1
+
+  *::-moz-placeholder
+    color: #969696
+    opacity: 1
+
+  *:-ms-input-placeholder
+    color: #969696
+    opacity: 1
+
+// ======= ck editor ==========
+
+.ck
+  &.ck-editor
+    width: 100% !important
+
+.ck.ck-editor__main>.ck-editor__editable
+  border-color: #acc4de !important
+  height: 220px
+  box-shadow: none !important
+
+.ck-editor__editable_inline
+  p
+    line-height: 1.5
+
+
+//========  text style  ==========
+
+// ======  autocomplete ===========
+
+.autocomplete__box
+  border: 1px solid #acc4de !important
+
+.autocomplete__icon
+  display: none
+
+.autocomplete__inputs input
+  padding-left: 5px
+
+.autocomplete
+  &__results__item
+    &:hover
+      background-color: #f7f7f7 !important
+  &.is-invalid
+    .autocomplete__box
+      border: 1px solid $color-red !important
+
+//  =======  clipper =============
+
+.my-clipper
+  height: 320px !important
+  margin-bottom: 20px
+
+//  =======  clipper =============
+
+
+// ========== tabs-bar ============
+
+.tabs-bar
+  display: flex
+  align-items: center
+  background-color: rgb(249, 249, 249)
+  border: 1px solid rgb(207, 214, 220)
+  height: 56px
+  padding: 0 20px
+  margin-bottom: 6px
+  &__item
+    @include font-size(16px)
+    font-weight: 500
+    &:last-child
+      width: 150px
+      margin-left: auto
+
+// ========= star ================
+
+.Rate__star
+  padding: 0 !important
+  border-radius: 100%
+  background-color: #f1f1f1 !important
+  width: 9px
+  height: 9px
+  overflow: hidden
+  margin-right: 4px
+  &.filled
+    background-color: #f4b41a !important
+  svg
+    display: none !important
+
+
+// =========== dropdown ===========
+
+.dropdown
+  .bp-dropdown__btn
+    padding: 0
+    border: none
+    color: $color-blue
+    @include font-size(14px)
+    &--active
+      background-color: transparent
+
+  &__list
+    padding: 0
+    li
+      height: 25px
+      display: flex
+      align-items: center
+      border-bottom: 1px solid $color-grey
+      @include font-size(12px)
+      &:last-child
+        border-bottom: none
+
+    a
+      border-bottom: none !important
+
+.bp-dropdown
+  position: relative
+  .link-default
+    white-space: nowrap
+
+.bp-dropdown__body
+  position: absolute !important
+  top: 100% !important
+  left: auto !important
+  right: 0
+
+
+// =========== datepicker ===========
+
+// just don't think why)
+.modal
+  .vdp-datepicker__calendar .cell.day-header
+    &:first-child
+      margin-left: -43px
+      position: relative
+      bottom: -40px
+      left: -255px
+      @include mq('w_575')
+        left: -235px
+
+  .vdp-datepicker__calendar
+    @include mq('w_575')
+      width: 280px !important

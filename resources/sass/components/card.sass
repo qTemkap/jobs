@@ -1,0 +1,177 @@
+@import "../default/vars"
+@import "../default/mixins"
+
+
+.resume-card
+  background-color: #fff
+  border:  1px solid rgb(207, 214, 220)
+  padding: 21px 25px
+  display: flex
+  margin-bottom: 7px
+  @include mq('w_767')
+    flex-direction: column
+    padding: 15px 25px
+  @include mq('w_575')
+    padding: 15px
+
+  &__content
+    width: 360px
+    flex-shrink: 0
+    @include mq('w_767')
+      width: 100%
+
+  &__title
+    @include font-size(20px)
+    @include line-height(26px)
+    font-weight: 500
+    color: $color-blue
+    margin-bottom: 11px
+    display: flex
+    text-decoration: none !important
+    &:hover
+      color: $color-blue
+    @include mq('w_575')
+      font-size: 1rem
+      line-height: 1.25rem
+
+  &__date
+    @include font-size(14px)
+    color: #545454
+    margin-bottom: 35px
+    @include mq('w_991')
+      margin-bottom: 20px
+    @include mq('w_767')
+      margin-bottom: 10px
+    @include mq('w_575')
+      line-height: 1.4
+    @include mq('w_325')
+      max-width: 140px
+
+
+  &__bar
+    display: flex
+    justify-content: flex-start
+    align-items: flex-end
+    @include mq('w_575')
+      flex-direction: column
+      align-items: flex-start
+
+  &__info
+    display: flex
+    justify-content: flex-end
+    margin-left: auto
+    margin-top: 7px
+    &-item
+      display: flex
+      flex-direction: column
+
+  &__number
+    @include font-size(20px)
+    color: #242424
+    display: flex
+    margin-bottom: 8px
+    text-align: center
+    justify-content: center
+    margin-left: 30px
+    font-weight: 500
+
+  &__text
+    @include font-size(13px)
+    color: #909192
+    display: flex
+    text-align: center
+    justify-content: center
+    margin-left: 30px
+
+
+.resume-status
+  @include font-size(14px)
+  margin-right: 15px
+  @include mq('w_575')
+    margin-right: 0
+    margin-bottom: 10px
+  .hide
+    color: #909192
+  .show
+    color: $color-green
+
+.resume-find
+  margin-right: 15px
+  color: $color-blue
+  @include font-size(14px)
+  text-decoration: none !important
+  @include mq('w_575')
+    display: inline-flex
+    margin-bottom: 10px
+  &:hover
+    color: $color-blue
+
+
+// ==========  vacancy style ==========
+
+.vacancy-bar__item
+  padding-right: 8px
+  margin-right: 8px
+  border-right: 1px solid #d5d5d5
+  @include mq('w_575')
+    padding-right: 0
+    margin-right: 0
+    border: none
+    margin-bottom: 5px
+  &:last-child
+    border-right: none
+
+
+.vacancy-card
+  @include mq('w_767')
+    flex-direction: row
+  @include mq('w_575')
+    align-items: flex-start
+  &__info
+    flex-direction: column
+    .resume-card__info-item
+      flex-direction: row
+      align-items: center
+      margin-bottom: 13px
+      @include mq('w_767')
+        margin-bottom: 9px
+      @include mq('w_575')
+        margin-bottom: 3px
+
+    .resume-card__icon
+      svg
+        @include mq('w_575')
+          width: 13px
+          height: 16px
+
+    .resume-card__number
+      margin-left: 10px
+      margin-bottom: 0
+      @include font-size(14px)
+      font-weight: 600
+      @include mq('w_575')
+        margin-left: 5px
+        font-size: .75rem
+
+    .resume-card__text
+      @include font-size(14px)
+      margin-left: 4px
+      color: #171717
+      @include mq('w_575')
+        font-size: .75rem
+      .resume-card__number
+        margin-right: 5px
+        margin-left: 5px
+        @include mq('w_575')
+          margin-left: 0
+
+  .resume-card__content
+    @include mq('w_767')
+      width: auto
+
+
+.feedback-link
+  transition: color .5s ease
+  &:hover
+    color: $color-blue
+

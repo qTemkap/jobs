@@ -1,0 +1,375 @@
+@import "~bootstrap/scss/bootstrap-reboot.scss"
+@import "~bootstrap/scss/bootstrap-grid.scss"
+@import "~bootstrap/scss/_alert"
+@import "./default/default"
+@import "./components/header"
+@import "./components/footer"
+
+#app
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 100%
+  overflow-x: hidden
+  position: relative
+
+
+.page
+  padding: 28px 0 75px
+  .page-title
+    margin-bottom: 20px
+    @include font-size(31px)
+
+.main-wrapper
+  margin-left: 30px
+  @include mq('w_1199')
+    margin-left: 0
+
+  &-reverse
+    margin-left: 0
+    margin-right: 30px
+    @include mq('w_1199')
+      margin-right: 0
+
+.content
+  flex: 1
+
+.hero
+  height: 550px
+  @extend .bg_section
+  background-image: url('../resources/img/hero.jpg')
+
+
+// ========== alert error ===========
+
+.alert-wrapper
+  position: fixed
+  top: 0
+  right: 0
+  width: 280px
+  z-index: 9999
+
+.alert-danger
+  color: #fff
+  border-color: $color-red
+  background-color: $color-red
+  border-radius: 0
+  margin-bottom: 1px
+
+
+
+@media print
+
+  .no-print
+    display: none !important
+  .page-header
+    display: none
+
+  .footer
+    display: none
+  .copy
+    display: none
+
+  .resume-preview, .vacancy-preview
+    border: none !important
+
+  body
+    background-color: #FFFFFF
+    border: solid 1px black
+    margin: 0px
+
+  .container
+    max-width: 100%
+    width: 100%
+
+
+@page
+  size: auto
+  margin: 0mm
+
+
+// ======== pagination ============
+
+.pagination
+  margin: 0
+  padding: 0
+  display: inline-flex
+  flex-direction: row
+  border: 1px solid $color-border
+  border-right: none
+  background-color: #f9f9f9
+  button:disabled:before, button[disabled]:before
+    display: none
+
+  li
+    list-style-type: none
+    margin-bottom: 0
+    border-right: 1px solid $color-border
+    &:first-child, &:last-child
+      display: none
+    &:nth-child(2), &:nth-last-child(2)
+      .pagination-link
+        width: 152px
+        @include mq('w_575')
+          width: 42px
+    &:nth-child(2)
+      svg
+        position: relative
+        top: -1px
+        margin-right: 8px
+    &:nth-last-child(2)
+      svg
+        position: relative
+        top: -1px
+        margin-left: 8px
+
+
+  .pagination-link
+    width: 42px
+    height: 42px
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    @include font-size(14px)
+    font-weight: 400
+    text-decoration: none !important
+    transition: background-color .5s ease, color .5s ease
+    -webkit-box-shadow: none
+    -moz-box-shadow: none
+    box-shadow: none
+    background-color: transparent
+    border: none
+    &:hover
+      background-color: $color-blue
+      color: #fff
+      path
+        fill: #fff
+
+    &--active
+      background-color: $color-blue
+      color: #fff
+
+
+// ========== mobile-menu-btn ============
+
+.mobile-menu-btn
+  display: none
+  @include mq('w_991')
+    display: inline-flex
+    align-items: center
+    span
+      font-weight: 500
+      @include font-size(16px)
+      margin: 0 10px
+
+// ============= import ==========
+
+// ============ empty-list ========
+
+.empty-list
+  background-color: #fff
+  border: 1px solid rgb(207, 214, 220)
+  padding: 60px 45px 45px
+  text-align: center
+  @include mq('w_767')
+    padding: 30px
+
+  &__image
+    margin-bottom: 34px
+    @include mq('w_767')
+      width: 100px
+      height: 100px
+      margin-bottom: 24px
+
+  &__title
+    @include font-size(24px)
+    margin-bottom: 11px
+    text-align: center
+
+  &__desc
+    @include font-size(16px)
+    margin-bottom: 40px
+    @include mq('w_767')
+      margin-bottom: 25px
+      line-height: 1.4
+
+  &__wrapper
+    display: flex
+    margin-bottom: 15px
+    @include mq('w_767')
+      flex-direction: column
+
+  &__item
+    flex: 1
+    border-left: 1px solid $color-grey
+    padding: 0 17px
+    margin-bottom: 15px
+    @include font-size(14px)
+    @include line-height(22px)
+    text-align: left
+
+  &__btn
+    height: 40px
+    line-height: 40px
+    padding: 0 30px
+    @include font-size(16px)
+
+
+
+
+
+@import "./views/page-preview"
+@import "./views/auth"
+@import "./views/home"
+@import "./views/profile"
+@import "./views/search"
+@import "./default/libs-style"
+
+
+.print-container
+  width: 595px
+  margin: 0 auto
+
+  .resume-preview
+    padding: 0
+    border: none
+  &__header
+    background-color: #0092d7
+    height: 57px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 35px
+    .logo
+      img
+        height: 28px
+    .desc
+      margin: 0
+      color: #fff
+      @include font-size(10px)
+
+  .profile__block-info
+    background-color: #f1f3f5
+    padding: 30px 35px 20px
+
+    .profile__small
+      width: 122px
+
+  .main-info__photo
+    border: 8px solid #ffffff
+    border-radius: 1px
+
+  .info-date
+    color: #7d7d7d
+    @include font-size(11px)
+    font-weight: 400
+    margin-bottom: 8px
+    letter-spacing: -0.5px
+
+  .info-title
+    @include font-size(28px)
+    margin-bottom: 14px
+    letter-spacing: -0.8px
+    font-weight: 400
+
+  .user-data
+    margin: 0
+
+  .info-salary
+    margin-bottom: 25px
+
+  .user-data__item
+    p
+      @include font-size(13px)
+      width: auto !important
+      line-height: 1.4
+  .user-data__item
+    p
+      &:last-child
+        margin-left: 9px
+    a
+      color: #008bcc
+
+  .profile__block-text
+    padding: 20px 35px
+    position: relative
+    border-bottom: none
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: calc(100% - 70px)
+      height: 1px
+      background-color: #cfd6dc
+    &:last-child
+      &:before
+        display: none
+
+    h2
+      @include font-size(21px)
+      margin-bottom: 17px
+    .subtitle
+      font-weight: 500
+      @include font-size(15px)
+      position: relative
+      padding-left: 15px
+      margin-bottom: 14px
+      &:before
+        content: ''
+        position: absolute
+        top: 4px
+        left: 0
+        width: 5px
+        height: 5px
+        border-radius: 100%
+        background: #0092d7
+
+    .desc
+      padding-left: 15px
+      @include font-size(14px)
+      @include line-height(22px)
+      margin-bottom: 0
+
+    .grey-text
+      font-weight: 400
+      color: #8d8d8d
+
+    .language-box
+      .grey-text
+        padding-left: 15px
+        margin-bottom: 25px
+      &:last-child
+        .grey-text
+          margin-bottom: 11px
+
+    .curse-box
+      .grey-text
+        padding-left: 15px
+
+    .dop-info
+      padding: 0
+      p
+        @include font-size(13px)
+        @include line-height(22px)
+
+.share-block
+  margin-left: 15px
+  display: flex
+  align-items: center
+  @include mq('w_767')
+      flex-direction: column
+      margin-left: 0
+      align-items: flex-start
+  &__title
+    margin-right: 15px
+    @include mq('w_767')
+      margin-right: 0
+      margin-bottom: 10px
+      margin-top: 10px
+
+.top_links_item
+  img
+    max-width: 50%

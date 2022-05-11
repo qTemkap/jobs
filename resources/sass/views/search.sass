@@ -1,0 +1,407 @@
+.search
+  .page-title
+    @include mq('w_575')
+      line-height: 2rem
+      font-size: 1.6rem
+      margin-bottom: 10px
+
+// ============== sort-block =================
+.filter-controler
+  @include mq('w_1199')
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 10px
+
+.sort-block
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  margin-top: 30px
+  @include mq('w_1199')
+    margin-top: 0
+  span
+    font-weight: 500
+    margin-right: 5px
+
+  .v-select__default.v-select
+    margin-left: auto
+
+    .form-control
+      display: none !important
+
+    .dropdown-toggle
+      border: none
+      height: 23px
+      padding: 0
+      min-width: 165px
+      cursor: pointer
+
+    .selected-tag
+      color: $color-blue
+
+    .vs__actions
+      padding: 0
+      margin-right: -2px
+
+    li
+      height: 24px
+    a
+      font-size: 0.8rem
+      padding: 3px 10px
+
+
+
+.main-wrapper
+  &__footer
+    margin-top: 15px
+    display: flex
+    justify-content: space-between
+    @include mq('w_767')
+      flex-direction: column
+      align-items: flex-start
+
+
+.search-result
+  @include font-size(15px)
+  color: #707070
+  font-weight: 400
+  @include mq('w_767')
+    display: flex
+
+
+.filter-btn
+  display: none
+  @include mq('w_1199')
+    display: inline-flex
+    align-items: center
+    span
+      font-weight: 500
+      margin-left: 8px
+      @include font-size(15px)
+
+
+.filter
+  width: calc(100% + 30px)
+  background-color: rgb(249, 249, 249)
+  border: 1px solid rgb(207, 214, 220)
+  padding: 24px 20px 12px
+  @include mq('w_1199')
+    width: 360px
+    position: absolute
+    top: 0
+    z-index: 999
+    display: none
+  @include mq('w_575')
+    width: 290px
+  &.active
+    @include mq('w_1199')
+      display: block
+  &-reverse
+    margin-left: -30px
+    @include mq('w_1199')
+      margin-left: 0
+
+
+  &__block
+    padding: 0 0 25px
+    border-bottom: 1px solid rgb(207, 214, 220)
+    margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0
+      border-bottom: none
+      padding-bottom: 0
+
+  &__wrapper
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+
+  &__title
+    @include font-size(16px)
+    margin-bottom: 15px
+    font-weight: 500
+
+  .autocomplete__box
+    background: transparent
+    border: 1px solid $color-border !important
+  .autocomplete__inputs
+    input
+      background-color: transparent
+      height: 42px
+
+  &__more
+    height: auto
+    line-height: 1
+    @include font-size(15px)
+    color: $color-blue
+    font-weight: 500
+
+  .v-select__default.v-select
+    width: 100%
+    .dropdown-toggle
+      height: 42px
+      border-color: $color-border
+
+  &__select
+    display: flex
+    align-items: center
+    margin-bottom: 9px
+    span
+      width: 24px
+    .v-select__default.v-select
+      width: 132px
+
+  .checkbox, .radio
+    margin-bottom: 8px
+    span
+      font-weight: 400
+
+  &__salary
+    align-items: center
+    flex-direction: row
+    margin-bottom: 15px
+
+    input
+      width: 130px
+      margin: 0 8px
+      height: 44px
+      border-color: $color-border
+      background-color: transparent
+
+  .btn-salary
+    height: 46px
+    line-height: 44px
+    padding: 0 13px
+    @include font-size(21px)
+    font-weight: 500
+    margin-left: auto
+
+  &__clear
+    margin-bottom: 10px
+    padding: 20px 25px
+    &-btn
+      height: 50px
+      line-height: 46px
+      width: 100%
+      border: 2px solid $color-blue
+      padding: 0 34px
+      background-color: transparent
+      @include font-size(17px)
+      color: $color-blue
+      &:hover
+        background-color: $color-blue
+        color: #fff
+        svg
+          path
+            fill: #fff
+
+      span
+        margin-left: 9px
+      svg
+        path
+          transition: fill .5s ease
+          fill: $color-blue
+
+
+.filter-category
+  height: 150px
+  overflow: hidden
+  padding-top: 1px
+  &.full
+    height: 100%
+
+.search-card
+  background-color: #fff
+  border: 1px solid rgb(207, 214, 220)
+  margin-bottom: 7px
+  padding: 25px
+  display: flex
+  flex-wrap: wrap
+  @include mq('w_767')
+    padding: 15px
+
+  .pic
+    width: 140px
+    flex-shrink: 0
+    @include mq('w_767')
+      width: 80px
+    @include mq('w_575')
+      display: none
+
+  .card-block
+    padding-left: 24px
+    width: calc(100% - 140px)
+    display: flex
+    flex-wrap: wrap
+    @include mq('w_767')
+      width: calc(100% - 80px)
+    @include mq('w_575')
+      width: 100%
+      padding-left: 0
+
+  .person
+    margin-top: -5px
+    width: calc(100% - 193px)
+    @include mq('w_991')
+      width: calc(100% - 135px)
+    @include mq('w_575')
+      width: 100%
+
+  .title
+    font-weight: 500
+    @include font-size(20px)
+    color: $color-blue
+    @include line-height(26px)
+    margin-bottom: 10px
+    text-decoration: none !important
+    display: inline-flex
+
+  .name
+    @include font-size(15px)
+    font-weight: 500
+    color: #545454
+    margin-bottom: 10px
+
+  .location
+    color: #909192
+    span
+      margin-left: 8px
+      svg
+        position: relative
+        top: -1px
+        margin-right: 4px
+
+  .info
+    margin-left: auto
+    width: 193px
+    @include mq('w_991')
+      width: 135px
+    @include mq('w_767')
+      padding-right: 0
+    @include mq('w_575')
+      margin-left: 0
+      width: 100%
+      margin-top: 10px
+
+  .salary
+    font-weight: 600
+    @include font-size(20px)
+    margin-bottom: 10px
+
+  .education
+    @include line-height(20px)
+    @include font-size(13px)
+    color: #909192
+
+  .desc
+    width: 100%
+    margin-top: 12px
+    @include font-size(15px)
+    @include line-height(22px)
+    @include mq('w_575')
+      margin-top: 10px
+
+  .card-redirect
+    text-decoration: none !important
+
+
+
+// ============ quantity ==============
+
+.quantity
+  .v-select__default.v-select
+    width: 90px
+    background-color: #f9f9f9
+    .dropdown-toggle
+      height: 42px
+      border-color: $color-border
+
+
+// ============= search-card-employer ================
+
+.search-card-employer
+
+  .card-block
+    padding-left: 0
+    width: 100%
+    flex-wrap: nowrap
+    @include mq('w_575')
+      flex-wrap: wrap
+
+  .pic
+    width: 66px
+    @include mq('w_767')
+      width: 44px
+
+  .person
+    padding-right: 50px
+    @include mq('w_767')
+      padding-right: 15px
+
+  .info
+    padding-right: 5px
+    @include mq('w_767')
+      width: 145px
+      flex-shrink: 0
+    @include mq('w_575')
+      width: 100%
+
+.filter-controler-employer
+  display: flex
+  margin-bottom: 15px
+  @include mq('w_1199')
+    justify-content: flex-end
+  @include mq('w_575')
+    flex-wrap: wrap
+  .sort-block
+    margin-right: 15px
+    margin-top: 0
+    @include mq('w_1199')
+      margin-right: 0
+      margin-left: 15px
+  .filter-btn
+    margin-right: auto
+
+
+
+.short-desc
+  max-height: 66px
+  overflow: hidden
+  @include mq('w_1199')
+    max-height: 59px
+
+// =========== empty list =================
+
+.empty-list
+  &__search
+    padding: 82px 45px 45px
+    @include mq('w_575')
+      padding: 40px 20px
+
+    .empty-list__title
+      @include font-size(20px)
+      margin-bottom: 24px
+      @include mq('w_575')
+        margin-bottom: 10px
+
+    .empty-list__desc
+      line-height: 1.4rem
+      margin-bottom: 32px
+      @include mq('w_575')
+        margin-bottom: 0
+      br
+        @include mq('w_575')
+          display: none
+
+  &__img
+    max-width: 125px
+    margin-bottom: 31px
+    @include mq('w_575')
+      max-width: 95px
+
+
+
+
+

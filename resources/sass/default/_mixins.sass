@@ -1,0 +1,50 @@
+//========  mixin fonts  ==========
+
+@mixin font-face($name, $file, $weight: normal, $style: normal)
+  @font-face
+    font-family: $name
+    src: url('../fonts/#{$file}.woff') format('woff'), url('../fonts/#{$file}.woff2') format('woff2')
+    font-weight: $weight
+    font-style: $style
+    font-display: block
+
+//======== font size rem  ==========
+
+@function calculateRem($size)
+  $remSize: $size / 16px
+  @return $remSize * 1rem
+
+
+@mixin font-size($size)
+  //font-size: $size
+  font-size: calculateRem($size)
+
+@mixin line-height($size)
+  //line-height: $size
+  line-height: calculateRem($size)
+
+
+//======== breakpoints  ==========
+
+$breakpoints: ("w_325": 325px, "w_575": 575px, "w_767": 767px, "w_991": 991px, "w_1199": 1199px,"w_1281": 1281px, "w_1367": 1367px, "w_1440": 1440px)
+
+=mq($width, $type: max)
+  @if map_has_key($breakpoints, $width)
+    $width: map_get($breakpoints, $width)
+
+    @if $type == max
+      $width: $width
+
+    @media only screen and (#{$type}-width: $width)
+      @content
+	
+//responsive
+  //@include mq('w_325')
+  //@include mq('w_575')
+  //@include mq('w_767')
+  //@include mq('w_991')
+  //@include mq('w_1199')
+  //@include mq('w_1281')
+  //@include mq('w_1367')
+  //@include mq('w_1440')
+			

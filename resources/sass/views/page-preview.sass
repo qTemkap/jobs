@@ -1,0 +1,391 @@
+
+.resume-preview
+  border: 1px solid #cfd6dc
+  padding: 0 30px
+  background-color: #fff
+  @include mq('w_575')
+    padding: 0 20px
+  .profile__block
+    margin-bottom: 0
+    padding: 20px 0
+    border: none
+    border-bottom: 1px solid #cfd6dc
+
+    &-edit
+      margin: 0 -30px
+      padding: 20px 30px
+      justify-content: space-between
+      align-items: center
+      @include mq('w_767')
+        flex-direction: row
+      @include mq('w_575')
+        padding: 20px
+        margin: 0 -20px
+
+    &-info
+      @include mq('w_767')
+        flex-direction: row
+      @include mq('w_575')
+        flex-direction: column-reverse
+      .profile__large
+        @include mq('w_767')
+          margin-bottom: 0
+      .profile__small
+        width: 172px
+        @include mq('w_767')
+          width: 125px
+        @include mq('w_575')
+          margin-bottom: 15px
+
+
+    &-text
+      flex-direction: column
+
+  .info-date
+    font-weight: 500
+    @include font-size(15px)
+    margin-bottom: 20px
+    @include mq('w_575')
+      margin-bottom: 15px
+
+  .info-title
+    font-weight: 500
+    @include font-size(33px)
+    @include line-height(37px)
+    color: #000000
+    margin-bottom: 13px
+    @include mq('w_767')
+      font-size: 1.6rem
+      line-height: 1.8rem
+    @include mq('w_575')
+      font-size: 1.4rem
+
+  .info-salary
+    display: flex
+    align-items: flex-end
+    @include font-size(20px)
+    font-weight: 500
+    margin-bottom: 31px
+    @include mq('w_767')
+      flex-direction: column
+      align-items: flex-start
+
+    @include mq('w_575')
+      margin-bottom: 15px
+    span
+      @include font-size(16px)
+      color: #81888b
+      font-weight: 400
+      margin-left: 8px
+      @include mq('w_767')
+        margin-left: 0
+        display: inline-flex
+        margin-top: 10px
+
+
+  .user-data
+    margin-bottom: 18px
+    @include mq('w_991')
+      margin-bottom: 0
+    @include mq('w_575')
+      margin-top: 25px
+
+    &__item
+      align-items: baseline
+      @include mq('w_991')
+        align-items: flex-start
+      p
+        margin-bottom: 4px
+        @include mq('w_991')
+          line-height: 1.2
+          margin-bottom: 10px
+        &:first-child
+          width: 130px
+          @include mq('w_575')
+            width: 110px
+        &:last-child
+          @include font-size(14px)
+          color: #909192
+          font-weight: 400
+
+  h2
+    @include font-size(26px)
+    @include line-height(35px)
+    margin-bottom: 17px
+    @include mq('w_991')
+      margin-bottom: 14px
+    @include mq('w_575')
+      font-size: 1.3rem
+      line-height: 1.3
+
+  .subtitle
+    font-weight: 500
+    @include font-size(20px)
+    margin-bottom: 25px
+    @include mq('w_991')
+      margin-bottom: 15px
+    @include mq('w_575')
+      font-size: 1.1rem
+
+  .desc
+    @include font-size(16px)
+    @include line-height(26px)
+    margin-bottom: 15px
+    @include mq('w_575')
+      font-size: .9rem
+      margin-bottom: 10px
+
+  p
+    @include font-size(16px)
+    line-height: 2
+    margin-bottom: 17px
+    @include mq('w_991')
+      margin-bottom: 14px
+    @include mq('w_575')
+      font-size: .9rem
+      margin-bottom: 10px
+
+
+.vacancy-preview
+  @extend .resume-preview
+
+  .profile__block-data
+    .user-data
+      margin: 0
+    .user-data__item p
+      overflow: hidden
+      text-overflow: ellipsis
+      &:first-child
+        width: 150px
+        @include mq('w_575')
+          width: 105px
+          padding-right: 5px
+
+
+  .profile__block-info
+    display: flex
+    align-items: flex-end
+    @include mq('w_575')
+      align-items: flex-start
+    .profile__small
+      width: 76px
+      @include mq('w_575')
+        width: 125px
+
+  .info-date
+    span
+      color: #707070
+      @include font-size(13px)
+      border-left: 1px solid #707070
+      margin-left: 16px
+      padding-left: 16px
+      font-weight: 400
+      @include mq('w_575')
+        padding-left: 5px
+        margin-left: 5px
+
+  .info-title
+    margin-bottom: 20px
+    @include mq('w_767')
+      margin-bottom: 15px
+
+  .info-salary
+    margin-bottom: 23px
+    @include mq('w_767')
+      margin-bottom: 15px
+    span
+      @include font-size(20px)
+      color: #81888b
+      font-weight: 400
+      margin-left: 12px
+      @include mq('w_575')
+        font-size: .9rem
+        margin-left: 6px
+
+  .info-company-name
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+    .link-default
+      @include font-size(15px)
+      color: $color-blue
+      font-weight: 500
+    svg
+      margin-left: 8px
+      position: relative
+      top: -1px
+
+  .profile__block-text
+    ul
+      padding: 0
+      margin: 0
+      li
+        list-style-type: none
+        padding-left: 30px
+        margin-bottom: 17px
+        @include font-size(16px)
+        line-height: 1.5
+        position: relative
+        @include mq('w_575')
+          font-size: .9rem
+          margin-bottom: 12px
+          line-height: 1.3
+          padding-left: 23px
+        &:before
+          content: ''
+          position: absolute
+          top: 12px
+          left: 6px
+          height: 1px
+          width: 10px
+          background-color: $color-blue
+          @include mq('w_575')
+            left: 0
+            top: 7px
+
+
+  .location
+    display: inline-flex
+    align-items: center
+    margin-right: 10px
+    @include mq('w_767')
+      align-items: flex-start
+    svg
+      flex-shrink: 0
+      margin-right: 5px
+
+
+.educations-wrapper
+  border-bottom: 1px solid $color-grey
+  margin-bottom: 30px
+  padding-bottom: 10px
+
+
+// ============== company-preview =============
+
+.company-preview
+  @extend .resume-preview
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 35px
+  padding-top: 30px
+  @include mq('w_991')
+    padding-top: 25px
+  @include mq('w_575')
+    padding-top: 15px
+
+  .profile__large
+    width: calc(100% - 215px)
+    padding-left: 27px
+    @include mq('w_991')
+      width: calc(100% - 125px)
+    @include mq('w_575')
+      width: 100%
+      padding-left: 0
+
+  .profile__small
+    width: 215px
+    @include mq('w_991')
+      width: 125px
+    @include mq('w_575')
+      width: 125px
+      margin-bottom: 10px
+
+
+  .info-name
+    font-weight: 500
+    color: #545454
+    @include font-size(15px)
+
+  &__desc
+    width: 100%
+
+  .user-data
+    margin-bottom: 30px
+    @include mq('w_991')
+      margin-top: 15px
+    @include mq('w_767')
+      margin-bottom: 0
+    &__item
+      p
+        margin-bottom: 0
+        @include mq('w_991')
+          margin-bottom: 5px
+        &:first-child
+          width: 241px
+          @include mq('w_991')
+            width: 170px
+          @include mq('w_767')
+            width: 135px
+          @include mq('w_575')
+            width: 75px
+
+  .select-wrapper
+    width: 100%
+    display: flex
+    justify-content: space-between
+    margin-bottom: 22px
+    @include mq('w_575')
+      flex-direction: column
+      margin-bottom: 0
+
+  .v-select__default.v-select
+    width: calc(50% - 7px)
+    @include mq('w_575')
+      width: 100%
+      margin-bottom: 10px
+
+    .dropdown-toggle
+      height: 42px
+      border-color: $color-border
+
+  &__select
+    display: flex
+    align-items: center
+    margin-bottom: 9px
+    span
+      width: 24px
+    .v-select__default.v-select
+      width: 132px
+
+.company-search-list
+  margin-bottom: 6px
+  @include mq('w_575')
+    padding-bottom: 5px
+
+.company-search-card
+  padding-top: 20px
+  &.search-card
+    padding: 25px 30px
+    @include mq('w_575')
+      padding: 15px
+
+    .card-block
+      width: 100%
+      padding: 0
+      flex-direction: column
+
+    .person
+      width: 100%
+      margin: 0 0 13px 0
+      display: flex
+      align-items: baseline
+      @include mq('w_575')
+        flex-direction: column
+
+    .title
+      margin-bottom: 0
+      @include mq('w_575')
+        margin-bottom: 10px
+
+    .salary
+      margin-bottom: 0
+      margin-left: 11px
+      white-space: nowrap
+      @include mq('w_575')
+        margin-left: 0
+
+    .location
+      span
+        margin: 0

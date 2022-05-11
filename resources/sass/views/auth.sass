@@ -1,0 +1,204 @@
+.auth-hero
+  @include mq('w_575')
+    height: 90px
+
+.auth
+  margin-top: -350px
+  margin-bottom: 100px
+  @include mq('w_991')
+    margin-bottom: 100px
+  @include mq('w_767')
+    margin-top: -440px
+    margin-bottom: 100px
+  @include mq('w_575')
+    margin-top: 25px
+    min-height: inherit
+    margin-bottom: 50px
+
+  &-title
+    @include font-size(34px)
+    line-height: 1
+    color: #323232
+    margin-bottom: 30px
+    font-weight: 400
+    text-align: center
+    @include mq('w_575')
+      font-size: 1.8rem
+      margin-bottom: 25px
+      line-height: 2rem
+
+  .input-group
+    &__login
+      margin-bottom: 9px
+    &__recovery
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 25px
+      margin-top: 14px
+      @include mq('w_575')
+        align-items: center
+        margin-bottom: 15px
+        flex-direction: column
+      .checkbox
+        @include mq('w_575')
+          margin-bottom: 10px
+
+  &-form
+    text-align: center
+    label
+      @include mq('w_767')
+        font-size: 1rem
+
+  &-text-confirm
+    @include font-size(16px)
+    @include line-height(24px)
+    text-align: center
+
+  &-recovery-footer
+    display: flex
+    flex-direction: column
+    align-items: center
+
+
+.auth-block
+  margin: 0 auto
+  border: 1px solid rgb(218, 218, 218)
+  border-radius: 2px
+  box-shadow: 0 6px 15px 0 rgba(157, 179, 182, 0.35)
+  background-color: #fff
+  width: 534px
+  @include mq('w_575')
+    width: 96%
+
+  &__header
+    display: flex
+    width: 100%
+
+  &__link
+    width: 50%
+    height: 74px
+    border: 1px solid rgb(207, 214, 220)
+    border-radius: 2px
+    background-color: rgb(249, 249, 249)
+    display: flex
+    align-items: center
+    justify-content: center
+    font-weight: 500
+    @include font-size(18px)
+    color: #323232
+    @extend .tdn
+    @include mq('w_575')
+      height: 50px
+      font-size: 1rem
+
+    &.active
+      border-color: transparent
+      background-color: #fff
+
+  &__content
+    padding: 36px 50px 28px
+    @include mq('w_575')
+      padding: 25px 15px 28px
+
+  &__footer
+    padding: 35px 50px 0
+    text-align: center
+    @include mq('w_575')
+      padding: 25px 15px 0
+
+  &__or
+    @include font-size(21px)
+    color: #414141
+    position: relative
+    margin-bottom: 15px
+    &:before
+      content: ''
+      position: absolute
+      top: 55%
+      left: 0
+      transform: translateY(-50%)
+      width: 100%
+      height: 1px
+      background-color: $color-grey
+    span
+      position: relative
+      display: inline-flex
+      z-index: 3
+      background-color: #fff
+      padding: 0 12px
+
+  &__social
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    &-link
+      display: inline-flex
+      width: 40px
+      height: 40px
+      align-items: center
+      justify-content: center
+      border: 1px solid $color-grey
+      margin: 0 5px
+
+    &-text
+      margin-bottom: 20px
+      @include font-size(15px)
+      color: #82888c
+
+  &__text
+    margin-top: 25px
+    color: #b9b9b9
+    @include font-size(13px)
+    @include line-height(21px)
+
+  .btn
+    margin: 0 auto
+
+
+.type__register
+  display: flex
+  flex-direction: row
+  width: 100%
+  margin-bottom: 30px
+  border: 1px solid $color-blue
+  border-radius: 3px
+  &-input
+    width: 50%
+    padding: 15px
+    margin-bottom: 0
+    cursor: pointer
+    @include mq('w_575')
+      text-align: center
+    &.active
+      background-color: $color-blue
+      span
+        color: #fff
+    input
+      display: none
+
+    span
+      @include font-size(15px)
+      font-weight: 400
+      display: inline-flex
+      position: relative
+      padding-left: 33px
+      @include mq('w_767')
+        font-size: 1rem
+      @include mq('w_575')
+        padding-left: 0
+      &:before
+        content: ''
+        position: absolute
+        top: -3px
+        left: 0
+        width: 20px
+        height: 20px
+        border-radius: 100%
+        border: 1px solid $color-light-blue
+        @include mq('w_575')
+          display: none
+
+

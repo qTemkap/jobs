@@ -1,0 +1,66 @@
+@import "../default/_vars"
+@import "../default/_mixins"
+@import "../default/_fonts"
+
+.footer
+  background-color: #434a54
+  padding: 40px 0 43px
+
+  &__title
+    font-weight: 500
+    @include font-size(16px)
+    color: #fff
+    margin-bottom: 23px
+    @include mq('w_767')
+      margin-bottom: 15px
+
+  &__list
+    padding-left: 0
+    @include mq('w_767')
+      margin-bottom: 20px
+    li
+      list-style-type: none
+      margin-bottom: 9px
+    a
+      color: #d3d3d3
+      padding-bottom: 1px
+      border-bottom: 1px solid rgba(255,255,255,.22)
+      transition: border-bottom-color.5s ease
+      @extend .tdn
+      &:hover
+        border-bottom-color: transparent
+
+  .social
+    margin-bottom: 24px
+    display: flex
+    flex-direction: row
+    a
+      border-bottom-color: transparent
+      margin-right: 18px
+
+  .rosvuz
+    a
+      border-bottom-color: transparent
+      &:hover
+        opacity: 1
+    img
+      transition: opacity .5s ease
+      opacity: .5
+
+.copy
+  background-color: #343b45
+  padding: 18px 0
+  p
+    text-align: center
+    color: #fff
+    opacity: .22
+    @include font-size(12px)
+    @include line-height(17px)
+    margin-bottom: 0
+    font-weight: 400
+
+.footer 
+  .social li
+    &:nth-child(3) 
+      display: none
+

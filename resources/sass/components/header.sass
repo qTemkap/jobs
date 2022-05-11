@@ -1,0 +1,196 @@
+.header
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  width: 100%
+  z-index: 99
+  padding: 17px 0
+  @include mq('w_575')
+    padding: 5px 0
+
+  &__logo
+    display: inline-flex
+    height: 80px
+    width: 255px
+    background: url("../../resources/img/logo.svg") no-repeat center
+    -webkit-background-size: contain
+    background-size: contain
+    @include mq('w_991')
+      width: 110px
+      height: 50px
+    @include mq('w_767')
+      margin-right: auto
+    @include mq('w_575')
+      height: 55px
+
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @include mq('w_767')
+      justify-content: flex-end
+
+  &__nav
+    margin-bottom: 13px
+    @include mq('w_767')
+      position: fixed
+      top: 0
+      bottom: 0
+      left: -300px
+      width: 220px
+      background-color: #fff
+      transition: left .5s ease
+      z-index: 999
+      @include mq('w_575')
+        width: 200px
+      &.show
+        left: 0
+
+    ul
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      padding-left: 0
+      @include mq('w_767')
+        flex-direction: column
+        padding-top: 20px
+        padding-left: 20px
+        align-items: flex-start
+
+    li
+      list-style-type: none
+      margin-bottom: 0
+    a
+      @include font-size(13px)
+      color: #fff
+      border-bottom: 1px solid rgba(255,255,255,.33)
+      display: inline-flex
+      margin: 0 25px
+      transition: border-bottom-color .5s ease
+      padding-bottom: 1px
+      @extend .tdn
+      @include mq('w_1199')
+        margin: 0 15px
+      @include mq('w_991')
+        margin: 0 8px
+      @include mq('w_767')
+        color: #000
+        margin: 0 0 15px 0
+        font-size: 1.5rem
+      @include mq('w_575')
+        font-size: 1.2rem
+        margin-bottom: 10px
+      &:hover
+        border-bottom-color: transparent
+
+  &__auth
+    display: flex
+    position: relative
+    align-items: center
+    margin-bottom: 11px
+    @include mq('w_991')
+      padding-left: 24px
+
+    &-image
+      width: 30px
+      height: 30px
+      border-radius: 100%
+      @include mq('w_991')
+        width: 25px
+        height: 25px
+      @include mq('w_575')
+        display: none
+
+    &-link
+      @include font-size(13px)
+      font-weight: 500
+      color: #fff
+      margin-left: 10px
+      padding-right: 10px
+      border-right: 1px solid #fff
+      @extend .tdn
+      @include mq('w_991')
+        font-size: .7rem
+      &:hover
+        color: #fff
+      &:last-child
+        padding-right: 0
+        border: none
+
+
+.menu-mobile
+  display: none
+  width: 20px
+  height: 20px
+  @include mq('w_767')
+    display: inline-flex
+    margin-left: auto
+    margin-right: 20px
+    margin-bottom: 10px
+  @include mq('w_575')
+    position: absolute
+    right: 0
+    bottom: -20px
+
+
+.page-header
+  .header
+    position: relative
+    background-color: #fff
+
+    &__logo
+      background: url("../../resources/img/page-logo.svg") no-repeat center
+      width: 255px
+      height: 55px
+      background-size: contain
+      @include mq('w_991')
+        width: 145px
+        height: 37px
+      @include mq('w_575')
+        background: url("../../resources/img/page-logo-mobile.svg") no-repeat center
+        background-size: contain
+        width: 95px
+        height: 33px
+
+    &__nav
+      margin-bottom: 0
+      a
+        color: #000000
+        border-bottom: 1px solid rgba(0, 0, 0, 0.33)
+        @include mq('w_991')
+          margin: 0 7px
+          font-size: .7rem
+        @include mq('w_767')
+          margin: 0 0 15px 0
+          font-size: 1.2rem
+          border-bottom-color: transparent
+
+        &:hover
+          border-bottom-color: transparent
+
+    &__auth
+      margin-bottom: 0
+      @include mq('w_991')
+        padding-left: 18px
+      @include mq('w_575')
+        margin-right: 37px
+      &:before
+        filter: invert(100%)
+        opacity: .2
+
+    &__auth-link
+      color: #000000
+      border-right: 1px solid #000
+      &:last-child
+        border-right-color: transparent
+
+    .menu-mobile
+      filter: invert(100%)
+      margin-bottom: 0
+      @include mq('w_575')
+        bottom: 7px
+
+  .header__auth-image[src='/images/auth.svg']
+    filter: invert(100%)
+    opacity: .2
